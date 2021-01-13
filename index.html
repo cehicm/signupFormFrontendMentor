@@ -26,19 +26,19 @@
     </style>
   </head>
   <body>
-    <h1>Learn to code by watching others</h1>
+    <div id="welcomeText" class="grid">
+      <h1>Learn to code by watching others</h1>
+      <p>
+        See how experienced developers solve problems in real-time. Watching
+        scripted tutorials is great, but understanding how developers think is
+        invaluable.
+      </p>
 
-    <p>
-      See how experienced developers solve problems in real-time. Watching
-      scripted tutorials is great, but understanding how developers think is
-      invaluable.
-    </p>
-
-    <button>
-      Try it free 7 days then <br />
-      $20/mo. thereafter
-    </button>
-
+      <button class="buttonTop">
+        <bold> Try it free 7 days </bold>
+        <small id="smallerText">then $20/mo. thereafter </small>
+      </button>
+    </div>
     <form action="#" method="get">
       <label for="First Name"> First Name </label>
       <input type="text" value="" id="firstNameField" required editable />
@@ -51,10 +51,9 @@
 
       <label for="Password"> Password </label>
       <input type="password" value="" id="passwordField" required />
+      <button onclick="submitForm()">Claim your free trial</button>
+      <p>By clicking the button, you are agreeing to our Terms and Services</p>
     </form>
-
-    <button onclick="submitForm()">Claim your free trial</button>
-    <p>By clicking the button, you are agreeing to our Terms and Services</p>
 
     <footer>
       <p class="attribution">

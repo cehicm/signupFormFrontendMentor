@@ -1,0 +1,88 @@
+/* @FONT-FACE */
+@font-face{
+    font-family: 'Poppins400';
+    src: url(/fonts/Poppins/Poppins-Regular.ttf) format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Poppins500';
+    src: url(/fonts/Poppins/Poppins-Medium.ttf) format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Poppins600';
+    src: url(/fonts/Poppins/Poppins-MediumItalic.ttf) format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'Poppins700';
+    src: url(/fonts/Poppins/Poppins-Bold.ttf) format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+:root{
+    --whiteText: #f8f8f8;
+    --secondary: #0A0B5B;
+  }
+
+  body{
+      background-color: hsl(0, 100%, 74%);
+      background-image: url(/images/bg-intro-mobile.png);
+      background-repeat: no-repeat;
+  }
+
+  p{
+      font-family: 'Poppins400';
+      font-size: 16px;
+      text-align: center;      
+  }
+
+  .grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+  }
+
+  #welcomeText{
+  }
+
+  #welcomeText h1{
+    font-family: 'Poppins700';
+    color: var(--whiteText);
+    grid-column: 1/5;
+    text-align: center;
+    margin-top: 75px;
+  }
+
+  #welcomeText p{
+    color: var(--whiteText);
+    grid-column: 1/5;
+    margin-bottom: 45px;
+  }
+
+   .buttonTop{
+    color: var(--whiteText);
+    grid-column: 1/5;
+    background-color:hsl(248, 32%, 49%);
+    border-radius: 7px;
+    box-shadow: 1px 3px 0px rgba(0,0,0,0.35);
+    display: inline-block;
+    padding: 14px 0;
+    justify-content: center;
+    font-family: 'Poppins400';
+    width: 200px;
+  }
+
+  #smallerText{
+      font-weight: lighter;
+      color:  hsl(246, 25%, 77%);
+  }
+
+ 
