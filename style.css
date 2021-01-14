@@ -32,6 +32,9 @@
     --secondary: #0A0B5B;
   }
 
+/* Main Styles for Mobile */
+
+
   body{
       background-color: hsl(0, 100%, 74%);
       background-image: url(/images/bg-intro-mobile.png);
@@ -47,9 +50,6 @@
   .grid{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-  }
-
-#welcomeText{
   }
 
   #welcomeText h1{
@@ -76,11 +76,47 @@
     padding: 20px 80px;
     justify-content: center;
     font-family: 'Poppins400';
+    margin-bottom: 20px;
   }
+
+  .buttonTop:hover {
+    opacity: 0.7;
+}
 
   #smallerText{
       font-weight: lighter;
       color:  hsl(246, 25%, 77%);
   }
 
- 
+  form{
+    font-family: 'Poppins400';
+    background-color: #f8f8f8;
+    padding: 15px 15px;
+    border-radius: 7px;
+
+  }
+
+  input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+.buttonBottom {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .buttonBottom:hover{
+    opacity: 0.7;
+  }

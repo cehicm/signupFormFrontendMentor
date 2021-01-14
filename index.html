@@ -40,18 +40,26 @@
       </button>
     </div>
     <form action="#" method="get">
-      <label for="First Name"> First Name </label>
-      <input type="text" value="" id="firstNameField" required editable />
+      <label for="First Name"> </label>
+      <input
+        type="text"
+        value="first"
+        id="firstNameField"
+        required
+        onfocus="this.value=''"
+      />
 
-      <label for="Last Name"> Last Name </label>
+      <label for="Last Name"> </label>
       <input type="text" value="" id="lastNameField" required />
 
-      <label for="Email"> Email </label>
+      <label for="Email"> </label>
       <input type="email" value="" id="emailField" required />
 
-      <label for="Password"> Password </label>
+      <label for="Password"> </label>
       <input type="password" value="" id="passwordField" required />
-      <button onclick="submitForm()">Claim your free trial</button>
+      <button class="buttonBottom" onclick="submitForm()">
+        Claim your free trial
+      </button>
       <p>By clicking the button, you are agreeing to our Terms and Services</p>
     </form>
 
