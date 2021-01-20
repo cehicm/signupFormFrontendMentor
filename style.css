@@ -51,34 +51,56 @@ p {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 3fr);
+
   /* */
+}
+
+#welcomeText {
+  grid-column: 1/3;
+  grid-row: 2;
+  padding: 8px 48px;
+  margin-left: 5px;
 }
 
 #welcomeText h1 {
   font-family: "Poppins700";
-  color: var(--whiteText);
-  grid-column: 1/5;
-  text-align: center;
-  margin-top: 75px;
+  font-size: 3.2em;
+  text-align: left;
+
+  /* color: var(--whiteText); */
+  color: black;
+  margin-top: 99px;
+  margin-left: 105px;
+  padding: 0 40px;
+  line-height: 58px;
 }
 
 #welcomeText p {
   color: var(--whiteText);
+  color: black;
+  text-align: left;
+
   grid-column: 1/5;
-  margin-bottom: 45px;
+  margin-left: 144px;
+  padding-right: 20px;
+  line-height: 25px;
+  margin-top: -4px;
 }
 
 .buttonTop {
-  color: var(--whiteText);
-  grid-column: 1/5;
-  background-color: hsl(248, 32%, 49%);
-  border-radius: 7px;
-  box-shadow: 1px 3px 0px rgba(0, 0, 0, 0.35);
-  display: inline-block;
-  padding: 20px 80px;
-  justify-content: center;
   font-family: "Poppins400";
-  margin-bottom: 20px;
+  color: var(--whiteText);
+  grid-column: 3/4;
+  /* background-color: hsl(248, 32%, 49%); */
+  display: inline-block;
+  justify-content: center;
+  width: 140%;
+  height: 64px;
+  margin-top: 112px;
+
+  background-color: yellow;
+  box-shadow: 1px 3px 0px rgba(0, 0, 0, 0.35);
+  border-radius: 7px;
 }
 
 .buttonTop:hover {
@@ -98,38 +120,62 @@ p {
 form {
   font-family: "Poppins400";
   background-color: #f8f8f8;
-  padding: 15px 15px;
+  padding: 25px 15px;
   border-radius: 7px;
+  grid-column: 3/5;
+  grid-row: 2/3;
+
+  margin-top: 14px;
+  width: 70%;
+  height: 102%;
+  box-sizing: border-box;
+
+  background-color: greenyellow;
 }
 
 input {
+  font-family: "Poppins500";
   grid-column: 1/5;
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
+  width: 90%;
 
+  border: 1px solid red;
+  border-radius: 2px;
+
+  padding: 17px 0;
+  margin-left: 26px;
+  margin-bottom: 15px;
+
+  box-sizing: border-box;
+  /* height: 100%; */
+}
+::placeholder {
+  color: blue;
+  font-size: 1.1em;
+  text-indent: 26px;
+}
 .buttonBottom {
-  width: 100%;
   background-color: hsl(154, 59%, 51%);
+  background-color: purple;
   color: var(--whiteText);
-  padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   border-radius: 4px;
-  cursor: pointer;
   text-transform: uppercase;
-  padding: 18px 0;
+  padding: 14px 0;
   grid-column: 1/5;
+
+  margin: 15px 23px;
+  /* letter-spacing: 2px; */
+  font-family: "Poppins500";
+  font-size: 1em;
+  margin: 17px 28px;
 }
 
 .buttonBottom:hover {
   opacity: 0.7;
 }
-
+button {
+  cursor: pointer;
+}
 .bottomOfForm {
   font-size: smaller;
   grid-column: 1/5;
@@ -140,7 +186,7 @@ input {
 }
 
 .attribution {
-  margin: 20px 0;
+  margin: 60px 0;
   color: var(--whiteText);
   color: rgb(41, 41, 41);
   font-family: "Poppins700";
@@ -155,25 +201,12 @@ input {
   text-decoration: underline;
 }
 
+/* Responsive for Phones */
+@media screen and (min-width: 320px) {
+}
+
 /* Responsive for Tablets */
 @media screen and (min-width: 960px) {
-  #welcomeText {
-    grid-column: 1/3;
-    grid-row: 1;
-  }
-
-  form {
-    grid-column: 3/5;
-    grid-row: 2/3;
-    background-color: greenyellow;
-  }
-
-  .buttonTop {
-    grid-row: 1;
-    grid-column: 3/5;
-    height: 70px;
-    /*  margin-top: 80px; */
-  }
 }
 
 /* Responsive for desktops */

@@ -35,13 +35,15 @@
         invaluable.
       </p>
     </div>
-      <button class="buttonTop grid">
+      <button class="buttonTop">
         <bold> Try it free 7 days </bold>
         <small class="smallerText">then $20/mo. thereafter </small>
       </button>
+      
     <form action="#" method="get" class="grid">
       <label for="First Name"> </label>
       <input
+      class="singleInputField"
         type="text"
         value=""
         placeholder="First Name"
@@ -52,6 +54,7 @@
 
       <label for="Last Name"> </label>
       <input
+      class="singleInputField"
         type="text"
         value=""
         id="lastNameField"
@@ -62,6 +65,7 @@
 
       <label for="Email"> </label>
       <input
+      class="singleInputField"
         type="email"
         value=""
         id="emailField"
@@ -71,7 +75,7 @@
       />
 
       <label for="Password"> </label>
-      <input type="password" value="" id="passwordField" placeholder="Password"
+      <input  class="singleInputField" type="password" value="" id="passwordField" placeholder="Password"
       required />
       <button class="buttonBottom" onclick="submitForm()">
         Claim your free trial
