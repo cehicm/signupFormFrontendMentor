@@ -37,8 +37,8 @@
 body {
   background-color: hsl(0, 100%, 74%);
   background-image: url(/images/bg-intro-mobile.png);
-  background-repeat: no-repeat;
-  padding: 0px 15px;
+  background-repeat: space;
+  margin: 0 auto;
 }
 
 p {
@@ -49,58 +49,51 @@ p {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 3fr);
-
-  /* */
+  grid-template-columns: repeat(7, 1fr);
 }
 
 #welcomeText {
-  grid-column: 1/3;
-  grid-row: 2;
-  padding: 8px 48px;
-  margin-left: 5px;
+  grid-column: 1/5;
+  grid-row: 1;
+  margin-top: 252px;
+  margin-left: 40px;
+  margin-right: 20px;
 }
 
 #welcomeText h1 {
+  color: var(--whiteText);
   font-family: "Poppins700";
   font-size: 3.2em;
-  text-align: left;
-
-  /* color: var(--whiteText); */
-  color: black;
-  margin-top: 99px;
-  margin-left: 105px;
-  padding: 0 40px;
   line-height: 58px;
 }
 
 #welcomeText p {
   color: var(--whiteText);
-  color: black;
   text-align: left;
+  line-height: 26px;
+}
 
-  grid-column: 1/5;
-  margin-left: 144px;
-  padding-right: 20px;
-  line-height: 25px;
-  margin-top: -4px;
+.formSectionWithButton {
+  display: grid;
+  grid-row: 1 / span 2;
+  grid-column: 5 / span 2;
 }
 
 .buttonTop {
-  font-family: "Poppins400";
   color: var(--whiteText);
-  grid-column: 3/4;
-  /* background-color: hsl(248, 32%, 49%); */
-  display: inline-block;
-  justify-content: center;
-  width: 140%;
-  height: 64px;
-  margin-top: 112px;
-
-  background-color: yellow;
+  background-color: hsl(248, 32%, 49%);
   box-shadow: 1px 3px 0px rgba(0, 0, 0, 0.35);
   border-radius: 7px;
+  display: inline-block;
+  grid-column: 3/5;
+  padding: 20px 10px;
+  margin-top: 112px;
+  margin-bottom: 20px;
+}
+
+.buttonBoldText {
+  font-family: "Poppins500";
+  font-size: 1.1em;
 }
 
 .buttonTop:hover {
@@ -108,8 +101,9 @@ p {
 }
 
 .smallerText {
-  font-weight: lighter;
+  font-family: "Poppins400";
   color: hsl(246, 25%, 77%);
+  font-size: 1em;
 }
 
 .smallerText a {
@@ -118,58 +112,50 @@ p {
 }
 
 form {
+  display: grid;
   font-family: "Poppins400";
   background-color: #f8f8f8;
-  padding: 25px 15px;
   border-radius: 7px;
   grid-column: 3/5;
-  grid-row: 2/3;
-
-  margin-top: 14px;
-  width: 70%;
-  height: 102%;
-  box-sizing: border-box;
-
-  background-color: greenyellow;
+  grid-row: 2;
+  align-content: space-between;
+  padding: 33px 0;
+  height: 400px;
+  width: 540px;
 }
 
 input {
-  font-family: "Poppins500";
+  font-family: "Poppins700";
+  border: 1px solid rgb(15, 15, 15);
+  border-radius: 4px;
   grid-column: 1/5;
-  width: 90%;
-
-  border: 1px solid red;
-  border-radius: 2px;
-
-  padding: 17px 0;
-  margin-left: 26px;
-  margin-bottom: 15px;
 
   box-sizing: border-box;
-  /* height: 100%; */
+  padding: 15px 0px;
+  margin: 11px 38px;
 }
-::placeholder {
-  color: blue;
-  font-size: 1.1em;
-  text-indent: 26px;
-}
+
 .buttonBottom {
+  font-family: "Poppins500";
   background-color: hsl(154, 59%, 51%);
-  background-color: purple;
   color: var(--whiteText);
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
-  padding: 14px 0;
   grid-column: 1/5;
+  margin-top: 15px;
 
-  margin: 15px 23px;
   /* letter-spacing: 2px; */
-  font-family: "Poppins500";
   font-size: 1em;
-  margin: 17px 28px;
+  padding: 15px 0;
+  margin: 11px 38px;
 }
-
+::placeholder {
+  color: #4d4949;
+  font-size: 1.1em;
+  text-indent: 26px;
+  transform: translate3d(0, 5px, 0);
+}
 .buttonBottom:hover {
   opacity: 0.7;
 }
@@ -189,12 +175,13 @@ button {
   margin: 60px 0;
   color: var(--whiteText);
   color: rgb(41, 41, 41);
-  font-family: "Poppins700";
+  font-family: "Poppins500";
+  margin-top: 80px;
 }
 
 .attribution a {
   text-decoration: none;
-  color: #0a0b5b;
+  color: var(--whiteText);
 }
 
 .attribution a:hover {
@@ -202,13 +189,32 @@ button {
 }
 
 /* Responsive for Phones */
-@media screen and (min-width: 320px) {
-}
 
 /* Responsive for Tablets */
 @media screen and (min-width: 960px) {
+  .buttonTop {
+    grid-column: 2/5;
+  }
+  form {
+    width: 400px;
+  }
+
+  #welcomeText h1 {
+    font-size: 2.4em;
+  }
+
+  #welcomeText p {
+    font-size: 0.9em;
+  }
+
+  .formSectionWithButton {
+    grid-column: 6 / span 1;
+  }
 }
 
-/* Responsive for desktops */
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 320px) {
+  .formSectionWithButton {
+    grid-column: 1 / span 1;
+    margin: 20px 40px;
+  }
 }
