@@ -56,8 +56,8 @@ p {
   grid-column: 1/5;
   grid-row: 1;
   margin-top: 252px;
-  margin-left: 40px;
-  margin-right: 20px;
+  padding: 0 130px;
+  margin-left: 200px;
 }
 
 #welcomeText h1 {
@@ -75,7 +75,6 @@ p {
 
 .formSectionWithButton {
   display: grid;
-  grid-row: 1 / span 2;
   grid-column: 5 / span 2;
 }
 
@@ -103,10 +102,9 @@ p {
 .smallerText {
   font-family: "Poppins400";
   color: hsl(246, 25%, 77%);
-  font-size: 1em;
 }
 
-.smallerText a {
+a {
   text-decoration: none;
   color: hsl(0, 100%, 74%);
 }
@@ -114,13 +112,12 @@ p {
 form {
   display: grid;
   font-family: "Poppins400";
-  background-color: #f8f8f8;
+  background-color: #fff;
   border-radius: 7px;
   grid-column: 3/5;
   grid-row: 2;
   align-content: space-between;
   padding: 33px 0;
-  height: 400px;
   width: 540px;
 }
 
@@ -163,8 +160,10 @@ button {
   cursor: pointer;
 }
 .bottomOfForm {
-  font-size: smaller;
-  grid-column: 1/5;
+  color: hsl(246, 25%, 77%);
+  margin: 0 20px;
+  font-size: 9px;
+  margin: 0 121px;
 }
 
 .bottomOfForm a:hover {
@@ -173,7 +172,6 @@ button {
 
 .attribution {
   margin: 60px 0;
-  color: var(--whiteText);
   color: rgb(41, 41, 41);
   font-family: "Poppins500";
   margin-top: 80px;
@@ -181,38 +179,41 @@ button {
 
 .attribution a {
   text-decoration: none;
-  color: var(--whiteText);
+  color: rgb(41, 41, 41);
 }
 
 .attribution a:hover {
   text-decoration: underline;
+  color: var(--whiteText);
 }
 
-/* Responsive for Phones */
+footer {
+  grid-column: 1/8;
+}
 
 /* Responsive for Tablets */
-@media screen and (min-width: 960px) {
-  .buttonTop {
-    grid-column: 2/5;
+@media screen and (max-width: 960px) {
+  #welcomeText {
+    grid-column: 1/8;
+    margin-left: 0px;
+    padding: 0 44px;
   }
-  form {
-    width: 400px;
+}
+
+@media screen and (max-width: 480px) {
+  #welcomeText {
+    grid-column: 1/8;
   }
 
   #welcomeText h1 {
-    font-size: 2.4em;
+    letter-spacing: 4px;
   }
 
-  #welcomeText p {
-    font-size: 0.9em;
+  .buttonTop {
+    margin-top: 35px;
+    margin-bottom: 76px;
   }
 
-  .formSectionWithButton {
-    grid-column: 6 / span 1;
-  }
-}
-
-@media screen and (min-width: 320px) {
   .formSectionWithButton {
     grid-column: 1 / span 1;
     margin: 20px 40px;
