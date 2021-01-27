@@ -212,10 +212,24 @@ footer {
   .buttonTop {
     margin-top: 35px;
     margin-bottom: 76px;
+    padding: 25px;
   }
 
   .formSectionWithButton {
     grid-column: 1 / span 1;
     margin: 20px 40px;
+  }
+
+  form {
+    padding: 55px 0;
+  }
+
+  .bottomOfForm {
+    font-size: 15px;
+  }
+
+  .buttonBottom {
+    margin-top: 22px;
+    margin-bottom: 22px;
   }
 }
