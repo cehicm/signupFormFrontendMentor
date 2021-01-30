@@ -11,7 +11,6 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | Intro component with sign up form</title>
   </head>
   <body>
@@ -69,9 +68,9 @@
       <p class="inputErrorMessage"></p>
 
       <label for="Password"> </label>
-      <input  class="singleInputField" type="password" value="" id="passwordField" placeholder="Password"
+      <input  class="singleInputField" type="password" id="passwordField" placeholder="Password"
       required />
-      <p class="inputErrorMessage"></p>
+      <p id="passErrorMessage"></p>
 
       <button class="buttonBottom" onclick="submitForm()">
         Claim your free trial
@@ -91,7 +90,8 @@
     </p>
   </footer>
   </div>
-  
+  <script src="/script.js"></script>
+
   </body>
 </html>
 
