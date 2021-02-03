@@ -2,14 +2,23 @@
 //check for blanks,
 // create an onblur and onfocus function
 
+// prevent default browser behaviour
+
+// check password for: caps, nums, length.
+// push all messages in an array
+
+// check email for: @ && .com?
+
 function submitForm() {
   let passwordInput = document.getElementById("passwordField").value;
   let inputErrorMessage = document.getElementById("passErrorMessage");
-
   let fieldInput = document.querySelectorAll("singleInputField").value;
+  let errorMessagesArray = [];
 
   if (passwordInput.length < 5) {
-    inputErrorMessage.innerHTML += "Cant Be Empty" + "<br>";
+    errorMessagesArray.push("Password must be longer than 5 characters");
+  } else if (passwordInput.length > 10) {
+    errorMessagesArray.push("too long");
   }
 
   let checkForNumbers = false;
@@ -25,12 +34,23 @@ function submitForm() {
     }
 
     if (checkForNumbers === false) {
-      inputErrorMessage.innerHTML =
-        "The passwords is missing a number" + "<br>";
+      errorMessagesArray.push("no numbers here");
     }
 
     if (checkForCapitalLetters === false) {
-      inputErrorMessage += " The password is missing a capital letter" + "<br>";
+      errorMessagesArray.push("no capital letters");
     }
   }
+
+  // e.preventDefault();
+
+  /*
+  if (passwordInput.length < 5) {
+    inputErrorMessage.innerHTML += "Cant Be Empty" + "<br>";
+  }
+
+
+  
+
+  */
 }

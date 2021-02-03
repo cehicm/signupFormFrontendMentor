@@ -126,9 +126,10 @@ input {
   border: 1px solid rgb(15, 15, 15);
   border-radius: 4px;
   grid-column: 1/5;
+  font-size: 1.1em;
 
   box-sizing: border-box;
-  padding: 15px 0px;
+  padding: 20px 20px;
   margin: 11px 38px;
 }
 
@@ -150,8 +151,6 @@ input {
 ::placeholder {
   color: #4d4949;
   font-size: 1.1em;
-  text-indent: 26px;
-  transform: translate3d(0, 5px, 0);
 }
 .buttonBottom:hover {
   opacity: 0.7;
