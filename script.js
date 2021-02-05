@@ -7,19 +7,19 @@
 //NEXT PROJECT: MORE JS HEAVY, JQUEARY ANIMATION  TYPESCRIPT
 
 submitForm = () => {
-  let passwordInput = document.getElementById("passwordField").value;
-  let inputErrorMessage = document.getElementById("inputErrorMessage");
+  const passwordInput = document.getElementById("passwordField").value;
+  const inputErrorMessage = document.getElementById("inputErrorMessage");
 
   if (passwordInput.length < 5) {
     inputErrorMessage.innerHTML +=
       "Password has to be at least 5 characters long" + "<br>";
   }
 
-  let checkForNumbers = false;
-  let checkForCapitalLetters = false;
+  const checkForNumbers = false;
+  const checkForCapitalLetters = false;
 
   for (let i = 0; i < passwordInput.length; i++) {
-    let singleCharacter = passwordInput[i];
+    const singleCharacter = passwordInput[i];
 
     if (!isNaN(singleCharacter)) {
       checkForNumbers = true;
