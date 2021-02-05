@@ -197,7 +197,7 @@ footer {
 
 #inputErrorMessage {
   color: rgb(255, 7, 7);
-  text-align: left;
+  text-align: center;
   font-style: italic;
 }
 
@@ -221,6 +221,9 @@ footer {
 
   .singleInputField {
     padding: 20px;
+  }
+  label {
+    padding: 14px 0px;
   }
   .buttonBottom {
     padding: 20px;

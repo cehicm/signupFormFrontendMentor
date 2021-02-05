@@ -1,24 +1,18 @@
-// add a function for input field:
-//check for blanks,
-// create an onblur and onfocus function
+//rewrite as ES6:
+// change to const where possible
+// switch to arrow func
+//delete unnecessary vars
+// debugging
 
-// prevent default browser behaviour
+//NEXT PROJECT: MORE JS HEAVY, JQUEARY ANIMATION  TYPESCRIPT
 
-// check password for: caps, nums, length.
-// push all messages in an array
-
-// check email for: @ && .com?
-
-function submitForm() {
+submitForm = () => {
   let passwordInput = document.getElementById("passwordField").value;
-  let inputErrorMessage = document.getElementById("passErrorMessage");
-  let fieldInput = document.querySelectorAll("singleInputField").value;
-  let errorMessagesArray = [];
+  let inputErrorMessage = document.getElementById("inputErrorMessage");
 
   if (passwordInput.length < 5) {
-    errorMessagesArray.push("Password must be longer than 5 characters");
-  } else if (passwordInput.length > 10) {
-    errorMessagesArray.push("too long");
+    inputErrorMessage.innerHTML +=
+      "Password has to be at least 5 characters long" + "<br>";
   }
 
   let checkForNumbers = false;
@@ -29,28 +23,18 @@ function submitForm() {
 
     if (!isNaN(singleCharacter)) {
       checkForNumbers = true;
-    } else if (singleCharacter === singleCharacter.toUpperCase()) {
-      checkForCapitalLetters == true;
-    }
-
-    if (checkForNumbers === false) {
-      errorMessagesArray.push("no numbers here");
-    }
-
-    if (checkForCapitalLetters === false) {
-      errorMessagesArray.push("no capital letters");
+    } else if (singleCharacter == singleCharacter.toUpperCase()) {
+      checkForCapitalLetters = true;
     }
   }
 
-  // e.preventDefault();
-
-  /*
-  if (passwordInput.length < 5) {
-    inputErrorMessage.innerHTML += "Cant Be Empty" + "<br>";
+  if (checkForNumbers == false) {
+    inputErrorMessage.innerHTML +=
+      "The password has to contain a number" + "<br>";
   }
 
-
-  
-
-  */
-}
+  if (checkForCapitalLetters == false) {
+    inputErrorMessage.innerHTML +=
+      "The password has to contain a capital letter" + "<br>";
+  }
+};
