@@ -1,7 +1,3 @@
-//rewrite as ES6:
-// change to const where possible
-// switch to arrow func
-//delete unnecessary vars
 // debugging
 
 //NEXT PROJECT: MORE JS HEAVY, JQUEARY ANIMATION  TYPESCRIPT
