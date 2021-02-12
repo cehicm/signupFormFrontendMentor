@@ -1,7 +1,3 @@
-// debugging
-
-//NEXT PROJECT: MORE JS HEAVY, JQUEARY ANIMATION  TYPESCRIPT
-
 submitForm = () => {
   const passwordInput = document.getElementById("passwordField").value;
   const inputErrorMessage = document.getElementById("inputErrorMessage");
