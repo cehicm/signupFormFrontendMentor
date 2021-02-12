@@ -247,6 +247,7 @@ footer {
 
   #welcomeText h1 {
     text-align: left;
+    padding: 0;
   }
 
   #welcomeText p {
