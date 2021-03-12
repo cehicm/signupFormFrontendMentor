@@ -233,9 +233,8 @@ footer {
     text-align: left;
   }
   form {
-    padding: 57px 39px;
-    gap: 14px;
-    height: 750px;
+    padding: 27px 39px;
+    gap: 4px;
   }
 
   .formSectionWithButton {
