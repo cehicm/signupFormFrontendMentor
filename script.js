@@ -1,32 +1,39 @@
-submitForm = () => {
-  const passwordInput = document.getElementById("passwordField").value;
-  const inputErrorMessage = document.getElementById("inputErrorMessage");
+const sendFormBtn = document.querySelector(".buttonBottom");
 
-  if (passwordInput.length < 5) {
-    inputErrorMessage.innerHTML +=
-      "Password has to be at least 5 characters long" + "<br>";
-  }
+sendFormBtn.addEventListener(
+  "click",
+  (submitForm = (event) => {
+    event.preventDefault();
+    const passwordInput = document.getElementById("passwordField").value;
+    const inputErrorMessage = document.getElementById("inputErrorMessage");
 
-  const checkForNumbers = false;
-  const checkForCapitalLetters = false;
-
-  for (let i = 0; i < passwordInput.length; i++) {
-    const singleCharacter = passwordInput[i];
-
-    if (!isNaN(singleCharacter)) {
-      checkForNumbers = true;
-    } else if (singleCharacter == singleCharacter.toUpperCase()) {
-      checkForCapitalLetters = true;
+    if (passwordInput.length < 5) {
+      inputErrorMessage.innerHTML +=
+        "Password has to be at least 5 characters long" + "<br>";
     }
-  }
 
-  if (checkForNumbers == false) {
-    inputErrorMessage.innerHTML +=
-      "The password has to contain a number" + "<br>";
-  }
+    const checkForNumbers = false;
+    const checkForCapitalLetters = false;
 
-  if (checkForCapitalLetters == false) {
-    inputErrorMessage.innerHTML +=
-      "The password has to contain a capital letter" + "<br>";
-  }
-};
+    for (let i = 0; i < passwordInput.length; i++) {
+      const singleCharacter = passwordInput[i];
+
+      if (!isNaN(singleCharacter)) {
+        checkForNumbers = true;
+      } else if (singleCharacter == singleCharacter.toUpperCase()) {
+        checkForCapitalLetters = true;
+      }
+    }
+
+    if (checkForNumbers === false) {
+      inputErrorMessage.innerHTML +=
+        "The password has to contain a number" + "<br>";
+    }
+
+    if (checkForCapitalLetters === false) {
+      inputErrorMessage.innerHTML +=
+        "The password has to contain a capital letter" + "<br>";
+    }
+    sendFormBtn.disabled = true;
+  })
+);
