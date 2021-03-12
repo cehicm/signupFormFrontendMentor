@@ -11,7 +11,7 @@
 
 body {
   background-color: hsl(0, 100%, 74%);
-  background-image: url(/images/bg-intro-mobile.png);
+  background-image: url(/introComponentWithSignupForm/images/bg-intro-mobile.png);
   background-repeat: space;
   padding: 1em;
 }
@@ -214,6 +214,9 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+  body {
+    background-image: url(/introComponentWithSignupForm/images/bg-intro-desktop.png);
+  }
   .container {
     grid-template-columns: repeat(7, 1fr);
     align-items: center;
